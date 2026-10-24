@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Lịch trình Long Hải 2 ngày 1 đêm — biển, hải sản, cao tốc Long Thành. Xe riêng từ Sài Gòn." />
+  <meta property="og:title" content="Long Hải · 2 ngày 1 đêm" />
+  <meta property="og:description" content="Trip board: Sài Gòn → Long Hải (1 đêm) → về. Biển + hải sản, không nhồi lịch." />
+  <meta property="og:image" content="images/long-hai-hero.jpg" />
+  <title>Long Hải · 2 ngày 1 đêm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="hero">
+    <nav class="topnav">
+      <a class="brand-mark" href="#top">LH · 2N1Đ</a>
+      <div class="topnav-links">
+        <a href="#itinerary">Lịch trình</a>
+        <a href="#food">Nên ăn gì</a>
+        <a href="#tolls">Cao tốc</a>
+        <a href="#tickets">Chuẩn bị trước</a>
+        <a href="#budget">Ngân sách</a>
+        <a href="#base">Xe &amp; base</a>
+      </div>
+    </nav>
+
+    <div class="hero-banner" id="top">
+      <img class="hero-photo" src="images/long-hai-hero.jpg" alt="Bãi biển nắng nhẹ — vibe Long Hải" width="1600" height="1064" />
+      <div class="hero-banner-fade" aria-hidden="true"></div>
+      <div class="sticker-field" aria-hidden="true">
+        <span class="float-sticker s1">🌊</span>
+        <span class="float-sticker s2">🦐</span>
+        <span class="float-sticker s3">🌅</span>
+        <span class="float-sticker s4">🚙</span>
+        <span class="float-sticker s5">🏖️</span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">2 ngày 1 đêm · Thứ Bảy → Chủ Nhật · xe riêng</p>
+        <h1>Long Hải<br /><span>2N1Đ</span> <span class="hero-with">– biển &amp; hải sản</span></h1>
+        <div class="hero-cta">
+          <a class="btn primary" href="#itinerary">Xem lịch trình</a>
+          <a class="btn ghost" href="#tickets">Checklist mang theo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-meta" aria-label="Thông tin nhanh">
+      <div>
+        <strong>1 đêm</strong>
+        <span>Resort / homestay ven biển</span>
+      </div>
+      <div>
+        <strong>~240 km</strong>
+        <span>SG ↔ Long Hải 2 chiều</span>
+      </div>
+      <div>
+        <strong>~₫4–6tr</strong>
+        <span>/ 2 người (ước)</span>
+      </div>
+      <div>
+        <strong>Xe riêng</strong>
+        <span>Ưu tiên cao tốc Long Thành</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel filters-panel" id="itinerary" aria-labelledby="itin-title">
+      <div class="section-head">
+        <h2 id="itin-title">Lịch trình theo ngày</h2>
+        <p>Mẫu <strong>Thứ Bảy → Chủ Nhật</strong>. Tick từng mục khi xong — trên điện thoại chạm để xem chú thích.</p>
+      </div>
+
+      <div class="controls">
+        <div class="control-block">
+          <label for="dayFilter">Ngày</label>
+          <div class="chip-row" id="dayFilter" role="group" aria-label="Lọc theo ngày"></div>
+        </div>
+
+        <div class="control-block">
+          <label for="typeFilter">Loại</label>
+          <div class="chip-row" id="typeFilter" role="group" aria-label="Lọc theo loại"></div>
+        </div>
+
+        <div class="control-row">
+          <label class="field grow">
+            <span>Tìm</span>
+            <input id="searchInput" type="search" placeholder="Biển, hải sản, Núi Nữa, cao tốc…" autocomplete="off" />
+          </label>
+          <label class="field">
+            <span>Sắp xếp</span>
+            <select id="sortSelect">
+              <option value="time">Theo giờ</option>
+              <option value="day">Theo ngày</option>
+              <option value="price">Theo chi phí</option>
+            </select>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="babyOnly" />
+            <span>Thân thiện bé</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="prebookOnly" />
+            <span>Cần chuẩn bị trước</span>
+          </label>
+        </div>
+      </div>
+
+      <p class="result-count" id="resultCount"></p>
+
+      <div class="layout-split">
+        <div class="timeline" id="timeline" aria-live="polite"></div>
+        <aside class="detail" id="detailPanel" aria-live="polite">
+          <p class="detail-empty">Chọn một mục bên trái để xem chi tiết, map và lưu ý.</p>
+        </aside>
+      </div>
+      <div class="detail-backdrop" id="detailBackdrop" hidden></div>
+    </section>
+
+    <section class="panel" id="food" aria-labelledby="food-title">
+      <div class="section-head">
+        <h2 id="food-title">Nên ăn gì · quán quanh biển</h2>
+        <p>Hải sản trưa / tối ngày 1 · sáng nhẹ + brunch ngày 2. Hỏi giá trước khi order. Mỗi gợi ý có Maps.</p>
+      </div>
+      <div class="chip-row" id="foodDayFilter" role="group" aria-label="Lọc món theo ngày"></div>
+      <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+    <section class="panel" id="tolls" aria-labelledby="toll-title">
+      <div class="section-head">
+        <h2 id="toll-title">Phí cao tốc · 2 chiều</h2>
+        <p>SG ↔ Long Hải qua cao tốc Long Thành · xe dưới 12 chỗ. ETC bắt buộc. Số liệu ước tính — đối chiếu app trước ngày đi.</p>
+      </div>
+      <p class="toll-vehicle" id="tollNote"></p>
+      <div id="tollTable"></div>
+      <div class="toll-legs" id="tollLegs"></div>
+      <div class="budget-total" id="tollTotal"></div>
+    </section>
+
+    <section class="panel" id="tickets" aria-labelledby="ticket-title">
+      <div class="section-head">
+        <h2 id="ticket-title">Chuẩn bị trước · Checklist</h2>
+        <p>Book phòng 1 đêm + ETC + xe. Không cần vé biển.</p>
+      </div>
+      <div class="ticket-toolbar">
+        <button type="button" class="btn ghost small" id="resetTickets">Reset checklist</button>
+        <p id="ticketProgress"></p>
+      </div>
+      <ul class="ticket-list" id="ticketList"></ul>
+      <div class="ticket-skip" id="ticketSkip"></div>
+    </section>
+
+    <section class="panel budget-panel" id="budget" aria-labelledby="budget-title">
+      <div class="section-head">
+        <h2 id="budget-title">Ngân sách</h2>
+        <p>Ước tính VND cho 2 người · 2 ngày 1 đêm. Chưa gồm mua sắm.</p>
+      </div>
+      <div class="fx-strip" id="fxStrip" aria-live="polite"></div>
+      <div class="chip-row" id="budgetFilter" role="group" aria-label="Lọc ngân sách"></div>
+      <div class="budget-grid" id="budgetGrid"></div>
+      <div class="budget-total" id="budgetTotal"></div>
+    </section>
+
+    <section class="panel" id="base" aria-labelledby="base-title">
+      <div class="section-head">
+        <h2 id="base-title">Xe · Chỗ ở · Quy tắc không mệt</h2>
+        <p>Sài Gòn → Long Hải (1 đêm ven biển) → về. Không nhồi cả Vũng Tàu trừ khi còn sức.</p>
+      </div>
+      <div class="info-grid">
+        <article>
+          <h3>Xe riêng</h3>
+          <ul>
+            <li>Ưu tiên oto riêng / thuê tự lái — ~120 km một chiều</li>
+            <li>Cao tốc Long Thành → DT994 / QL51 hướng Long Hải</li>
+            <li>Kiểm tra xăng + ETC trước sáng đi và trưa về</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Chỗ ở</h3>
+          <ul>
+            <li>Ưu tiên &lt;5 phút đi bộ tới bãi</li>
+            <li>Check-in sớm nếu được; gửi đồ khi chưa tới giờ</li>
+            <li>Hỏi parking oto + wifi + giờ hồ bơi</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Lộ trình gọn</h3>
+          <ul>
+            <li><strong>Ngày 1:</strong> SG → biển → nghỉ → Núi Nữa / hoàng hôn → hải sản</li>
+            <li><strong>Ngày 2:</strong> Sáng biển → brunch → về trước giờ kẹt CN</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Quy tắc không mệt</h3>
+          <ul>
+            <li>14:00–16:00 = giờ nghỉ / hồ bơi</li>
+            <li>Một điểm đồi là đủ</li>
+            <li>Ăn tối ~18:30 tránh quán đông</li>
+            <li>Chủ Nhật về trước 14:00 nếu sợ kẹt</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Không làm gì</h3>
+          <ul>
+            <li>Không nhồi cả lịch Vũng Tàu trong 2N1Đ</li>
+            <li>Không tắm biển lúc trời tối</li>
+            <li>Không order set hải sản quá lớn cả hai bữa</li>
+            <li>Không nhậu rồi lái về</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Long Hải · 2 ngày 1 đêm · Trip board riêng · cùng kiểu Du Lịch Miền Tây</p>
+    <p><a href="https://github.com/sangle18/Du-lich-Long-Hai">Repo GitHub</a></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
