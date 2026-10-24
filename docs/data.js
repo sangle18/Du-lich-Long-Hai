@@ -62,6 +62,12 @@
             address: "TT. Long Hải",
             note: "Đặc sản gỏi cá trích Long Hải · gọi nhỏ share nếu lần đầu.",
             maps: maps("Gỏi Cá Trích Anh Tuấn Long Hải")
+          },
+          {
+            name: "Gỏi cá Bình Minh",
+            address: "766 Đường Võ Thị Sáu, Long Hải",
+            note: "Gỏi cá trích / cá mai nổi · cuốn bánh tráng + nước chấm đậu phộng · ~100–200k/người · hợp trưa nhẹ.",
+            maps: maps("Gỏi cá Bình Minh 766 Võ Thị Sáu Long Hải")
           }
         ],
         avoid: "Order vừa — tối còn dinner. Hỏi giá ghẹ/tôm trước khi order.",
@@ -82,6 +88,12 @@
             maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort 210 Hai Bà Trưng")
           },
           {
+            name: "Quầy Ghẹ Anh Đào",
+            address: "210 Hai Bà Trưng, KP Hải Phong 1, Long Hải",
+            note: "Chuyên ghẹ: hấp gừng, rang me, nướng muối ớt · gần Palace · hỏi giá theo ký trước khi order.",
+            maps: maps("Quầy Ghẹ Anh Đào 210 Hai Bà Trưng Long Hải")
+          },
+          {
             name: "Nhà hàng hải sản Tuấn Kiệt",
             address: "972 Đường Võ Thị Sáu, KP Hải Sơn, Long Hải",
             note: "Gần biển · tôm cua mực tươi · không gian thoáng, hợp nhóm.",
@@ -100,7 +112,7 @@
             maps: maps("Quán ốc Dũng Long Hải")
           }
         ],
-        avoid: "Ăn ~18:30 tránh đông. Uống vừa — sáng còn biển.",
+        avoid: "Ăn ~18:30 tránh đông. Uống vừa — sáng còn biển. Hỏi giá ghẹ trước.",
         place: "Hai Bà Trưng / Võ Thị Sáu",
         maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort"),
         price: "₫400–700k / 2 người"
@@ -241,12 +253,13 @@
         place: "Võ Thị Sáu / Hai Bà Trưng",
         notes: [
           "Ưu tiên: Hải Sản Nhi hoặc Hải Phương 980 Võ Thị Sáu",
+          "Muốn đặc sản: Gỏi cá Bình Minh — 766 Võ Thị Sáu (cá trích/cá mai)",
           "Backup: Cây Sung 188 Hai Bà Trưng",
           "Order vừa — tối còn dinner · hỏi giá ghẹ/tôm"
         ],
-        eat: "Hải Sản Nhi · Hải Phương · Cây Sung",
+        eat: "Hải Sản Nhi · Bình Minh · Hải Phương · Cây Sung",
         link: "",
-        maps: maps("Quán Ăn Hải Sản Nhi Long Hải")
+        maps: maps("Gỏi cá Bình Minh 766 Võ Thị Sáu Long Hải")
       },
       {
         id: "d1-rest",
@@ -319,12 +332,13 @@
         place: "210 Hai Bà Trưng hoặc 972 Võ Thị Sáu",
         notes: [
           "Ưu tiên: Nhà hàng Đại Dương trong Palace — đặt bàn nếu đông",
+          "Thèm ghẹ: Quầy Ghẹ Anh Đào — cùng khu 210 Hai Bà Trưng (hỏi giá/ký)",
           "Backup: Tuấn Kiệt 972 Võ Thị Sáu · hoặc A.Mẫn / ốc Dũng",
           "Về phòng ~20:30"
         ],
-        eat: "Đại Dương Palace · Tuấn Kiệt · A.Mẫn",
+        eat: "Đại Dương Palace · Ghẹ Anh Đào · Tuấn Kiệt · A.Mẫn",
         link: "https://palacelonghairesort.vn/nha-hang/",
-        maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort 210 Hai Bà Trưng")
+        maps: maps("Quầy Ghẹ Anh Đào 210 Hai Bà Trưng Long Hải")
       },
       {
         id: "d2-sunrise",
