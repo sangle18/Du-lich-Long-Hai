@@ -37,24 +37,36 @@
         id: "f1-lunch",
         day: "1",
         meal: "Trưa",
-        title: "Long Hải — vừa tới",
+        title: "Long Hải — vừa tới (trưa)",
         recommend: [
           {
-            name: "Hải sản ven biển (trung tâm)",
-            address: "Khu bãi biển Long Hải",
-            note: "Gỏi cá, tôm hấp, canh chua · hỏi giá trước · order vừa vì tối còn dinner.",
-            maps: maps("nhà hàng hải sản Long Hải Bà Rịa Vũng Tàu")
+            name: "Quán Ăn Hải Sản Nhi",
+            address: "Khu phố Hải Sơn / gần Võ Thị Sáu, TT. Long Hải",
+            note: "Nhiều review · tôm nướng, ghẹ hấp, mực hấp gừng, lẩu cá đuối · hỏi giá trước · 08:00–22:00 · 0906 348 211.",
+            maps: maps("Quán Ăn Hải Sản Nhi Long Hải Võ Thị Sáu")
           },
           {
-            name: "Cơm biển / canh chua cá",
-            address: "Gần bãi",
-            note: "Nhẹ bụng sau 2 giờ ngồi xe · uống nước dừa.",
-            maps: maps("cơm hải sản Long Hải")
+            name: "Quán ăn hải sản Hải Phương",
+            address: "980 Đường Võ Thị Sáu, TT. Long Hải",
+            note: "Gần bãi · phù hợp trưa · ~09:00–21:00 · 0966 598 980.",
+            maps: maps("Quán ăn hải sản Hải Phương 980 Võ Thị Sáu Long Hải")
+          },
+          {
+            name: "Quán Ăn Cây Sung",
+            address: "188 Đường Hai Bà Trưng, TT. Long Hải",
+            note: "Hải sản tươi, bánh xèo hải sản, canh chua · không gian rộng, hợp gia đình.",
+            maps: maps("Quán Ăn Cây Sung 188 Hai Bà Trưng Long Hải")
+          },
+          {
+            name: "Gỏi Cá Trích Anh Tuấn",
+            address: "TT. Long Hải",
+            note: "Đặc sản gỏi cá trích Long Hải · gọi nhỏ share nếu lần đầu.",
+            maps: maps("Gỏi Cá Trích Anh Tuấn Long Hải")
           }
         ],
-        avoid: "Đừng order set quá lớn ngày đầu. Tránh nhậu trưa nếu còn lái nội thị.",
-        place: "Long Hải",
-        maps: maps("nhà hàng hải sản Long Hải Bà Rịa Vũng Tàu"),
+        avoid: "Order vừa — tối còn dinner. Hỏi giá ghẹ/tôm trước khi order.",
+        place: "Ven biển Long Hải",
+        maps: maps("Quán Ăn Hải Sản Nhi Long Hải"),
         price: "₫250–450k / 2 người"
       },
       {
@@ -64,46 +76,64 @@
         title: "Tối hải sản — ngày 1",
         recommend: [
           {
-            name: "Hải sản nướng / hấp",
-            address: "Ven biển Long Hải",
-            note: "Tôm, mực, nghêu, cá · ăn ~18:30 trước khi đông · mang tiền mặt.",
-            maps: maps("hải sản nướng Long Hải")
+            name: "Nhà hàng Đại Dương — Palace Long Hai",
+            address: "210 Hai Bà Trưng, KP Hải Phong 1, Long Hải",
+            note: "Trong resort, view biển · gỏi cá đục/trích, hải sản nướng · đặt bàn 0254 386 8430 / 0938 156 069 · 06:30–22:00.",
+            maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort 210 Hai Bà Trưng")
           },
           {
-            name: "Ốc / nhậu nhẹ",
-            address: "Phố biển",
-            note: "Chỉ nếu còn sức sau đồi · đừng quá muộn.",
-            maps: maps(" quán ốc Long Hải Bà Rịa")
+            name: "Nhà hàng hải sản Tuấn Kiệt",
+            address: "972 Đường Võ Thị Sáu, KP Hải Sơn, Long Hải",
+            note: "Gần biển · tôm cua mực tươi · không gian thoáng, hợp nhóm.",
+            maps: maps("Nhà hàng hải sản Tuấn Kiệt 972 Võ Thị Sáu Long Hải")
+          },
+          {
+            name: "Hải Sản A.Mẫn",
+            address: "Khu ẩm thực đêm gần Charm Resort, Long Hải",
+            note: "Buổi tối · ~16:00–23:00 · 0379 531 834.",
+            maps: maps("Hải Sản A.Mẫn Long Hải Charm Resort")
+          },
+          {
+            name: "Quán ốc Dũng",
+            address: "Gần trung tâm TT. Long Hải",
+            note: "Ốc / nhậu nhẹ sau hoàng hôn · ~15:00–23:30 · 0917 065 478.",
+            maps: maps("Quán ốc Dũng Long Hải")
           }
         ],
-        avoid: "Rượu nhiều + nắng ngày mai = mệt.",
-        place: "Long Hải",
-        maps: maps("hải sản Long Hải buổi tối"),
+        avoid: "Ăn ~18:30 tránh đông. Uống vừa — sáng còn biển.",
+        place: "Hai Bà Trưng / Võ Thị Sáu",
+        maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort"),
         price: "₫400–700k / 2 người"
       },
       {
         id: "f2-breakfast",
         day: "2",
         meal: "Sáng",
-        title: "Breakfast nhẹ trước biển",
+        title: "Breakfast trước biển",
         recommend: [
           {
-            name: "Bánh mì / cafe ven đường",
-            address: "Gần chỗ ở",
-            note: "Nhanh, no vừa · ra biển trước 08:30 khi nắng còn dễ chịu.",
-            maps: maps("bánh mì cafe Long Hải")
+            name: "Hủ Tiếu Nam Vang Vân Anh 2",
+            address: "TT. Long Hải (hủ tiếu hải sản)",
+            note: "Hủ tiếu hải sản nổi · no vừa rồi ra biển · rating cao trên Maps.",
+            maps: maps("Hủ Tiếu Nam Vang Hủ Tiếu Hải Sản Vân Anh 2 Long Hải")
           },
           {
-            name: "Phở / hủ tiếu",
-            address: "Thị trấn Long Hải",
-            note: "Nếu muốn ngồi lâu hơn trước check-out.",
-            maps: maps("phở Long Hải Bà Rịa")
+            name: "Bánh mì / cafe mặt tiền Võ Thị Sáu",
+            address: "Đường Võ Thị Sáu, TT. Long Hải",
+            note: "Nhanh, gần bãi · ra biển trước 08:30.",
+            maps: maps("bánh mì cafe Võ Thị Sáu Long Hải")
+          },
+          {
+            name: "Buffet sáng tại resort (nếu KS có)",
+            address: "Palace / Fleur de Lys / Đoàn 298",
+            note: "Chỉ nếu đã book gồm breakfast — tiết kiệm thời gian trước check-out.",
+            maps: maps("Palace Long Hai Resort")
           }
         ],
         avoid: "Đừng ăn quá no nếu còn tắm biển.",
-        place: "Long Hải",
-        maps: maps("ăn sáng Long Hải"),
-        price: "₫60–120k / 2 người"
+        place: "Gần chỗ ở / Võ Thị Sáu",
+        maps: maps("Hủ Tiếu Hải Sản Vân Anh 2 Long Hải"),
+        price: "₫60–150k / 2 người"
       },
       {
         id: "f2-brunch",
@@ -112,21 +142,27 @@
         title: "Brunch rồi về SG",
         recommend: [
           {
-            name: "Hải sản lần cuối (nhẹ)",
-            address: "Long Hải",
-            note: "1–2 món share rồi lên xe · tránh no quá dễ buồn ngủ lái.",
-            maps: maps("nhà hàng hải sản Long Hải")
+            name: "Quán ăn gia đình Hải Hưng",
+            address: "822 Nguyễn Tất Thành, TT. Long Hải",
+            note: "Cơm gia đình + hải sản · không gian rộng · dễ đậu xe trước khi về.",
+            maps: maps("Quán ăn gia đình Hải Hưng 822 Nguyễn Tất Thành Long Hải")
           },
           {
-            name: "Cơm gà / quán bình dân",
-            address: "Gần quốc lộ về",
-            note: "Nhanh, rẻ khi bắt đầu về SG.",
-            maps: maps("cơm gà gần Long Hải")
+            name: "Quán Ăn Thảo Ốc",
+            address: "459 Đường Nguyễn Tất Thành, Long Hải",
+            note: "Ốc / món nhẹ · 10:00–22:00 · 0993 724 738 · gọi ít rồi lên xe.",
+            maps: maps("Quán Ăn Thảo Ốc 459 Nguyễn Tất Thành Long Hải")
+          },
+          {
+            name: "Hải Phương (lần 2 nếu thích)",
+            address: "980 Võ Thị Sáu",
+            note: "1–2 món share · không nhậu nếu đang lái.",
+            maps: maps("Quán ăn hải sản Hải Phương 980 Võ Thị Sáu Long Hải")
           }
         ],
         avoid: "Không nhậu trưa nếu đang lái về.",
-        place: "Long Hải / dọc đường về",
-        maps: maps("Long Hải Bà Rịa Vũng Tàu"),
+        place: "Nguyễn Tất Thành / Võ Thị Sáu",
+        maps: maps("Quán ăn gia đình Hải Hưng 822 Nguyễn Tất Thành Long Hải"),
         price: "₫200–400k / 2 người"
       }
     ],
@@ -141,191 +177,193 @@
         price: 150000,
         baby: true,
         prebook: false,
-        place: "~120 km · cao tốc Long Thành · 2–2,5 giờ",
+        place: "Cao tốc Long Thành → QL51 / TL44A · ~120 km",
         notes: [
-          "Xuất phát trước 07:30 để tránh kẹt Long Thành",
-          "Cao tốc Long Thành → DT994 / QL51 hướng Long Hải",
+          "Xuất phát trước 07:30 tránh kẹt Long Thành",
+          "Maps đích: Palace Long Hai (210 Hai Bà Trưng) hoặc Dinh Cô",
           "ETC + xăng đủ · kiểm tra lốp",
           "1 stop toilet giữa đường nếu có bé"
         ],
         link: "",
-        maps: "https://www.google.com/maps/dir/?api=1&origin=Ho+Chi+Minh+City&destination=Long+Hai+Ba+Ria+Vung+Tau"
+        maps: "https://www.google.com/maps/dir/?api=1&origin=Ho+Chi+Minh+City&destination=Palace+Long+Hai+Resort+210+Hai+Ba+Trung"
       },
       {
         id: "d1-checkin",
         day: "1",
         time: "09:30",
         end: "10:15",
-        title: "Tới chỗ ở — gửi đồ / check-in sớm",
+        title: "Check-in / gửi đồ — Palace hoặc Fleur de Lys",
         type: "hotel",
         price: 0,
         baby: true,
         prebook: true,
-        place: "Resort / homestay ven biển",
+        place: "Palace Long Hai · 210 Hai Bà Trưng (gợi ý)",
         notes: [
-          "Book phòng cách biển &lt;5 phút đi bộ",
-          "Chưa tới giờ check-in: gửi hành lý, đổi đồ tắm",
-          "Hỏi wifi, gửi xe, hồ bơi"
+          "Gợi ý 1: Palace Long Hai Resort — 210 Hai Bà Trưng, KP Hải Phong 1 · 0254 386 8430",
+          "Gợi ý 2: Fleur de Lys Resort & Spa — 4 Lê Trọng Tấn, Long Hải",
+          "Gợi ý 3: Khu nghỉ Đoàn 298 — 189 Hai Bà Trưng (bãi riêng)",
+          "Chưa tới giờ: gửi hành lý, đổi đồ tắm, hỏi parking + hồ bơi"
         ],
         eat: "",
-        link: "",
-        maps: maps("resort biển Long Hải Bà Rịa Vũng Tàu")
+        link: "https://palacelonghairesort.vn/",
+        maps: maps("Palace Long Hai Resort 210 Hai Bà Trưng Long Hải")
       },
       {
         id: "d1-beach",
         day: "1",
         time: "10:15",
         end: "12:15",
-        title: "Biển Long Hải — tắm &amp; nằm cát",
+        title: "Bãi biển Dinh Cô / Long Hải",
         type: "attraction",
         price: 0,
         baby: true,
         prebook: false,
-        place: "Bãi biển Long Hải",
+        place: "36 Đ. Hai Bà Trưng · gần Dinh Cô",
         notes: [
-          "Kem chống nắng + mũ + nước uống",
-          "Sóng tương đối êm hơn Vũng Tàu; vẫn chú ý trẻ nhỏ",
-          "Thuê ghế / dù nếu cần — hỏi giá trước",
-          "Đừng để điện thoại không người trông"
+          "Bãi công cộng trước Dinh Cô — kem chống nắng + mũ + nước",
+          "Sóng êm hơn Vũng Tàu; vẫn chú ý trẻ nhỏ",
+          "Thuê ghế/dù hỏi giá trước",
+          "Nếu ở Palace/Đoàn 298: có thể dùng bãi resort"
         ],
         link: "",
-        maps: maps("Bãi biển Long Hải")
+        maps: maps("Bãi Biển Dinh Cô 36 Hai Bà Trưng Long Hải")
       },
       {
         id: "d1-lunch",
         day: "1",
         time: "12:15",
         end: "13:30",
-        title: "Trưa hải sản",
+        title: "Trưa — Hải Sản Nhi / Hải Phương",
         type: "food",
         price: 350000,
         baby: true,
         prebook: false,
-        place: "Quán ven biển",
+        place: "Võ Thị Sáu / Hai Bà Trưng",
         notes: [
-          "Order vừa — tối còn dinner",
-          "Hỏi giá món trước khi order",
-          "Ưu tiên hấp / nướng / canh chua"
+          "Ưu tiên: Hải Sản Nhi hoặc Hải Phương 980 Võ Thị Sáu",
+          "Backup: Cây Sung 188 Hai Bà Trưng",
+          "Order vừa — tối còn dinner · hỏi giá ghẹ/tôm"
         ],
-        eat: "Gỏi cá, tôm hấp, canh chua",
+        eat: "Hải Sản Nhi · Hải Phương · Cây Sung",
         link: "",
-        maps: maps("nhà hàng hải sản Long Hải")
+        maps: maps("Quán Ăn Hải Sản Nhi Long Hải")
       },
       {
         id: "d1-rest",
         day: "1",
         time: "13:30",
         end: "16:00",
-        title: "Nghỉ trưa · hồ bơi / phòng",
+        title: "Nghỉ trưa · hồ bơi resort",
         type: "rest",
         price: 0,
         baby: true,
         prebook: false,
-        place: "Chỗ ở",
+        place: "Palace / Fleur de Lys / Đoàn 298",
         notes: [
           "Giờ vàng tránh nắng gắt",
-          "Ngủ ngắn 45–90 phút hoặc hồ bơi",
-          "Sạc điện thoại + chuẩn bị nước cho chiều"
+          "Ngủ ngắn 45–90 phút hoặc hồ bơi vô cực (Palace)",
+          "Sạc điện thoại + nước cho chiều lên Dinh Cô / Núi Nữa"
         ],
         link: "",
-        maps: ""
+        maps: maps("Palace Long Hai Resort")
       },
       {
         id: "d1-hill",
         day: "1",
         time: "16:00",
         end: "17:45",
-        title: "Đồi Núi Nữa / view biển chiều",
+        title: "Dinh Cô + Núi Kỳ Vân / view chiều",
         type: "attraction",
-        price: 50000,
-        baby: false,
+        price: 0,
+        baby: true,
         prebook: false,
-        place: "Núi Nữa · Long Hải",
+        place: "Dinh Cô · Hai Bà Trưng, TT. Long Hải",
         notes: [
-          "Đi xe lên — mang dép bám tốt nếu leo bộ đoạn ngắn",
-          "View biển + gió chiều đẹp hơn trưa",
-          "Bé mệt → bỏ, dạo Lăng Ông Nam Hải / phố biển",
-          "Không cần thêm điểm Vũng Tàu nếu đã mệt"
+          "Dinh Cô: di tích quốc gia dưới chân núi Kỳ Vân · ~37 bậc lên điện",
+          "Maps: Dinh Cô Long Hải (plus code 96PM+MM4)",
+          "Backup nhẹ: Lăng Ông Nam Hải (Dinh Ông) gần bãi",
+          "Muốn cao hơn: Núi Nữa / Minh Đạm — chỉ nếu còn sức, mang dép bám"
         ],
         link: "",
-        maps: maps("Núi Nữa Long Hải")
+        maps: maps("Dinh Cô Long Hải Hai Bà Trưng")
       },
       {
         id: "d1-sunset",
         day: "1",
         time: "17:45",
         end: "18:30",
-        title: "Hoàng hôn trên bãi",
+        title: "Hoàng hôn bãi Dinh Cô",
         type: "attraction",
         price: 0,
         baby: true,
         prebook: false,
-        place: "Bãi biển Long Hải",
+        place: "Bãi biển trước Dinh Cô",
         notes: [
-          "Mang áo khoác mỏng — gió biển mát",
+          "Áo khoác mỏng — gió biển mát",
           "Chụp ảnh nhanh rồi về ăn tối",
           "Không tắm lúc trời tối"
         ],
         link: "",
-        maps: maps("Bãi biển Long Hải")
+        maps: maps("Bãi Biển Dinh Cô Long Hải")
       },
       {
         id: "d1-dinner",
         day: "1",
         time: "18:30",
         end: "20:30",
-        title: "Tối hải sản + về nghỉ",
+        title: "Tối — Đại Dương Palace / Tuấn Kiệt",
         type: "food",
         price: 550000,
         baby: true,
         prebook: false,
-        place: "Quán hải sản Long Hải",
+        place: "210 Hai Bà Trưng hoặc 972 Võ Thị Sáu",
         notes: [
-          "Ăn sớm tránh đông",
-          "Uống vừa — sáng còn biển",
-          "Về phòng ~20:30, ngủ sớm"
+          "Ưu tiên: Nhà hàng Đại Dương trong Palace — đặt bàn nếu đông",
+          "Backup: Tuấn Kiệt 972 Võ Thị Sáu · hoặc A.Mẫn / ốc Dũng",
+          "Về phòng ~20:30"
         ],
-        eat: "Tôm, mực, nghêu, cá nướng",
-        link: "",
-        maps: maps("hải sản nướng Long Hải")
+        eat: "Đại Dương Palace · Tuấn Kiệt · A.Mẫn",
+        link: "https://palacelonghairesort.vn/nha-hang/",
+        maps: maps("Nhà hàng Đại Dương Palace Long Hai Resort 210 Hai Bà Trưng")
       },
       {
         id: "d2-sunrise",
         day: "2",
         time: "06:30",
         end: "08:00",
-        title: "Sáng sớm trên biển (tuỳ sức)",
+        title: "Sáng sớm bãi Dinh Cô (tuỳ sức)",
         type: "attraction",
         price: 0,
         baby: true,
         prebook: false,
-        place: "Bãi biển Long Hải",
+        place: "Bãi Biển Dinh Cô",
         notes: [
           "Bình minh / chạy bộ / cafe nhìn sóng",
-          "Nếu mệt: ngủ thêm, bỏ mục này",
-          "Mang nước và kem chống nắng nhẹ"
+          "Mệt → ngủ thêm, bỏ mục này",
+          "Kem chống nắng nhẹ + nước"
         ],
         link: "",
-        maps: maps("Bãi biển Long Hải")
+        maps: maps("Bãi Biển Dinh Cô Long Hải")
       },
       {
         id: "d2-breakfast",
         day: "2",
         time: "08:00",
         end: "09:00",
-        title: "Ăn sáng",
+        title: "Ăn sáng — Vân Anh 2 / bánh mì",
         type: "food",
         price: 90000,
         baby: true,
         prebook: false,
-        place: "Gần chỗ ở",
+        place: "TT. Long Hải",
         notes: [
-          "Bánh mì + cafe hoặc phở",
-          "No vừa — còn tắm biển ngắn"
+          "Ưu tiên: Hủ tiếu hải sản Vân Anh 2",
+          "Nhanh: bánh mì cafe Võ Thị Sáu",
+          "Hoặc buffet sáng trong resort nếu đã gồm"
         ],
-        eat: "Bánh mì / phở / cafe",
+        eat: "Vân Anh 2 · bánh mì Võ Thị Sáu",
         link: "",
-        maps: maps("ăn sáng Long Hải")
+        maps: maps("Hủ Tiếu Hải Sản Vân Anh 2 Long Hải")
       },
       {
         id: "d2-beach2",
@@ -337,41 +375,41 @@
         price: 0,
         baby: true,
         prebook: false,
-        place: "Bãi biển + chỗ ở",
+        place: "Bãi resort hoặc Dinh Cô",
         notes: [
           "Tắm ngắn, thu đồ",
-          "Check-out đúng giờ; gửi vali nếu còn brunch",
-          "Kiểm tra không quên sạc / kính / dép"
+          "Check-out đúng giờ; gửi vali nếu còn brunch Hải Hưng",
+          "Kiểm tra sạc / kính / dép"
         ],
         link: "",
-        maps: maps("Bãi biển Long Hải")
+        maps: maps("Palace Long Hai Resort")
       },
       {
         id: "d2-brunch",
         day: "2",
         time: "10:30",
         end: "12:00",
-        title: "Brunch hải sản nhẹ",
+        title: "Brunch — Hải Hưng 822 Nguyễn Tất Thành",
         type: "food",
         price: 300000,
         baby: true,
         prebook: false,
-        place: "Long Hải",
+        place: "822 Nguyễn Tất Thành, TT. Long Hải",
         notes: [
-          "1–2 món share rồi lên xe",
-          "Không nhậu nếu đang lái",
-          "Mua nước / snack cho đoạn đường về"
+          "Hải Hưng: cơm + hải sản, dễ đậu xe trước khi về",
+          "Backup: Thảo Ốc 459 Nguyễn Tất Thành",
+          "1–2 món · không nhậu nếu đang lái · mua nước mang theo"
         ],
-        eat: "Hải sản nhẹ hoặc cơm",
+        eat: "Hải Hưng · Thảo Ốc",
         link: "",
-        maps: maps("nhà hàng hải sản Long Hải")
+        maps: maps("Quán ăn gia đình Hải Hưng 822 Nguyễn Tất Thành Long Hải")
       },
       {
         id: "d2-return",
         day: "2",
         time: "12:00",
         end: "14:30",
-        title: "Về Sài Gòn (cao tốc)",
+        title: "Về Sài Gòn (cao tốc Long Thành)",
         type: "transport",
         price: 150000,
         baby: true,
@@ -379,21 +417,21 @@
         place: "Long Hải → Long Thành → SG · ~2–2,5 giờ",
         notes: [
           "Xuất phát trước 13:00 nếu sợ kẹt chiều CN",
-          "Phí cao tốc chiều về — xem bảng Cao tốc",
-          "Nghỉ toilet một lần nếu buồn ngủ",
-          "Giữ tốc độ, không vội"
+          "Maps từ Palace / Hải Hưng về Quận 1 hoặc nhà",
+          "Phí cao tốc — xem bảng Cao tốc",
+          "1 stop toilet nếu buồn ngủ"
         ],
         link: "",
-        maps: "https://www.google.com/maps/dir/?api=1&origin=Long+Hai+Ba+Ria+Vung+Tau&destination=Ho+Chi+Minh+City"
+        maps: "https://www.google.com/maps/dir/?api=1&origin=Palace+Long+Hai+Resort&destination=Ho+Chi+Minh+City"
       }
     ],
     tickets: [
       {
         id: "t-hotel",
-        title: "Book phòng 1 đêm (ven biển)",
-        meta: "Ưu tiên &lt;5 phút tới bãi · hủy linh hoạt nếu được",
-        price: "₫600–1.500k / đêm",
-        url: maps("resort homestay Long Hải Bà Rịa Vũng Tàu")
+        title: "Book phòng 1 đêm — Palace / Fleur de Lys / Đoàn 298",
+        meta: "Palace: 210 Hai Bà Trưng · Fleur de Lys: 4 Lê Trọng Tấn · Đoàn 298: 189 Hai Bà Trưng",
+        price: "₫800k–2.5tr / đêm (tuỳ hạng)",
+        url: maps("Palace Long Hai Resort 210 Hai Bà Trưng")
       },
       {
         id: "t-etc",
@@ -405,49 +443,49 @@
       {
         id: "t-car",
         title: "Xe riêng / thuê xe tự lái",
-        meta: "Đổ đầy bình · kiểm tra lốp · ghế trẻ em nếu có bé",
+        meta: "Đích Maps: Palace Long Hai hoặc Dinh Cô · ghế trẻ em nếu có bé",
         price: "Xăng ~₫250–400k khứ hồi",
-        url: "https://www.google.com/maps/search/?api=1&query=cay+xang+gan+day"
+        url: maps("Palace Long Hai Resort")
+      },
+      {
+        id: "t-dinner-book",
+        title: "(Tuỳ) Đặt bàn Đại Dương Palace tối Ngày 1",
+        meta: "0254 386 8430 / 0938 156 069 · cuối tuần dễ đông",
+        price: "₫0 đặt bàn",
+        url: "https://palacelonghairesort.vn/nha-hang/",
+        optional: true
       },
       {
         id: "t-sun",
         title: "Kem chống nắng + mũ + dép biển",
-        meta: "Mang từ nhà — đừng mua đắt ở bãi",
+        meta: "Mang từ nhà — đừng mua đắt ở bãi Dinh Cô",
         price: "₫0 nếu đã có",
         url: ""
-      },
-      {
-        id: "t-optional-vt",
-        title: "(Tuỳ) Thêm điểm Vũng Tàu",
-        meta: "Chỉ nếu còn sức ngày 1 — cách ~20–25 phút",
-        price: "Thêm thời gian + xăng",
-        url: maps("Vũng Tàu"),
-        optional: true
       }
     ],
     ticketSkip: [
-      "Vé tham quan biển — hầu hết free",
-      "Tour ghép nhồi lịch",
-      "Nhồi cả Vũng Tàu trong 2N1Đ nếu chỉ muốn chill",
-      "Fastfood làm bữa chính thay hải sản"
+      "Vé vào bãi Dinh Cô / biển công cộng — free",
+      "Vé Dinh Cô (thờ) — thường free / công đức tùy ý",
+      "Tour ghép nhồi lịch Vũng Tàu trong 2N1Đ",
+      "Fastfood thay hải sản"
     ],
     budgetMeta: {
       kicker: "Gợi ý chi tiêu · 2 người · 2N1Đ",
-      rate: "Xe riêng · cao tốc Long Thành · 1 đêm ven biển",
-      examples: "Kiểm tra xăng / ETC trước mỗi chặng · KS có chỗ đậu oto",
-      note: "Ngân sách dưới đây là mức mid — chưa gồm mua sắm."
+      rate: "Base gợi ý: <strong>Palace Long Hai</strong> · 210 Hai Bà Trưng",
+      examples: "Ăn: Hải Sản Nhi / Cây Sung / Đại Dương · Điểm: Dinh Cô + bãi",
+      note: "Ngân sách mid — chỉnh theo hạng phòng thật."
     },
     budget: [
-      { id: "hotel", label: "Phòng 1 đêm", amount: 1000000, note: "Resort/homestay ước", group: "fixed" },
+      { id: "hotel", label: "Phòng 1 đêm", amount: 1200000, note: "Palace / Fleur mid", group: "fixed" },
       { id: "food", label: "Ăn uống 2 ngày", amount: 1290000, note: "Hải sản mid · 2 người", group: "daily" },
       { id: "toll", label: "Cao tốc 2 chiều", amount: 250000, note: "Long Thành · ước", group: "car" },
       { id: "fuel", label: "Xăng khứ hồi", amount: 350000, note: "~240 km cả chuyến", group: "car" },
-      { id: "misc", label: "Gửi xe / ghế / nước", amount: 150000, note: "Lặt vặt", group: "daily" },
+      { id: "misc", label: "Gửi xe / ghế / nước", amount: 150000, note: "Bãi Dinh Cô", group: "daily" },
       { id: "buffer", label: "Buffer", amount: 300000, note: "Phòng hờ", group: "tickets" }
     ],
     tolls: {
       vehicle: "Xe dưới 12 chỗ (nhóm 1)",
-      note: "Ước tính ETC cho chặng SG ↔ Long Hải qua cao tốc Long Thành. Mức thực tế thay đổi theo trạm / thời điểm — kiểm tra app trước ngày đi.",
+      note: "Ước tính ETC cho chặng SG ↔ Long Hải (Palace / Dinh Cô) qua cao tốc Long Thành. Kiểm tra app trước ngày đi.",
       segments: [
         {
           id: "hcm-lt",
@@ -458,16 +496,16 @@
         },
         {
           id: "lt-lh",
-          name: "Long Thành → Long Hải (ĐT/QL nối)",
+          name: "Long Thành → Long Hải (QL51 / TL44A)",
           km: "~40–50",
           oneWay: 35000,
-          note: "Một phần quốc lộ có thể không thu phí · phí ước nếu còn đoạn BOT"
+          note: "Đoạn nối có thể một phần không thu phí"
         }
       ],
       legs: [
         {
           id: "leg-d1",
-          label: "Ngày 1 · Đi SG → Long Hải",
+          label: "Ngày 1 · Đi SG → Palace / Dinh Cô",
           segmentIds: ["hcm-lt", "lt-lh"],
           note: "Chiều đi · ETC sẵn"
         },
