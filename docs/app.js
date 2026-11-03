@@ -17,23 +17,31 @@
     parkedMobile: null
   };
 
-  const typeLabel = {
-    flight: "Bay",
-    attraction: "Tham quan",
-    food: "Ăn uống",
-    transport: "Di chuyển",
-    rest: "Nghỉ",
-    hotel: "Khách sạn"
-  };
+  // Nhãn + sticker lấy từ data.types để tag trong timeline khớp với chip lọc
+  const typeLabel = {};
+  const typeSticker = {};
+  (data.types || []).forEach((t) => {
+    if (t.id === "all") return;
+    typeLabel[t.id] = t.label;
+    typeSticker[t.id] = t.sticker;
+  });
 
-  const typeSticker = {
-    flight: "✈️",
-    attraction: "🎟️",
-    food: "🍜",
-    transport: "🚗",
-    rest: "😴",
-    hotel: "🏨"
-  };
+  function readStore(key) {
+    try {
+      return JSON.parse(localStorage.getItem(key) || "{}") || {};
+    } catch {
+      return {};
+    }
+  }
+
+  function writeStore(key, value) {
+    try {
+      if (value === null) localStorage.removeItem(key);
+      else localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      /* chế độ riêng tư / hết bộ nhớ: bỏ qua, trang vẫn chạy */
+    }
+  }
 
   const els = {
     dayFilter: document.getElementById("dayFilter"),
@@ -160,28 +168,28 @@
       return true;
     });
 
+    const byDayTime = (a, b) =>
+      Number(a.day) - Number(b.day) || a.day.localeCompare(b.day) || a.time.localeCompare(b.time);
     list = list.slice().sort((a, b) => {
-      if (state.sort === "day") {
-        return a.day.localeCompare(b.day) || a.time.localeCompare(b.time);
-      }
       if (state.sort === "price") {
-        return b.price - a.price || a.time.localeCompare(b.time);
+        // vẫn giữ theo ngày (timeline nhóm theo ngày), trong ngày: đắt trước
+        return (
+          Number(a.day) - Number(b.day) ||
+          (Number(b.price) || 0) - (Number(a.price) || 0) ||
+          a.time.localeCompare(b.time)
+        );
       }
-      return a.day.localeCompare(b.day) || a.time.localeCompare(b.time);
+      return byDayTime(a, b);
     });
     return list;
   }
 
   function loadDoneState() {
-    try {
-      return JSON.parse(localStorage.getItem(doneKey) || "{}");
-    } catch {
-      return {};
-    }
+    return readStore(doneKey);
   }
 
   function saveDoneState(map) {
-    localStorage.setItem(doneKey, JSON.stringify(map));
+    writeStore(doneKey, map);
   }
 
   function isDone(id) {
@@ -607,15 +615,11 @@
   }
 
   function loadTicketState() {
-    try {
-      return JSON.parse(localStorage.getItem(storageKey) || "{}");
-    } catch {
-      return {};
-    }
+    return readStore(storageKey);
   }
 
   function saveTicketState(map) {
-    localStorage.setItem(storageKey, JSON.stringify(map));
+    writeStore(storageKey, map);
   }
 
   function renderTickets() {
@@ -708,13 +712,23 @@
         .join("");
     }
 
-    const oneWayFull = segs.reduce((a, s) => a + (s.oneWay || 0), 0);
-    const roundTrip = oneWayFull * 2;
-    // Actual trip uses D1 (hcm-tl) + D2 (tl-mt+mt-ct) + D4 (all three) = hcm-tl*2 + tl-mt*2 + mt-ct*2 = roundTrip of all segments
+    // Tổng = cộng các chặng thật trong data.tolls.legs (không giả định "mọi đoạn × 2 chiều")
+    const legs = data.tolls.legs || [];
+    const tripTotal = legs.length
+      ? legs.reduce(
+          (acc, leg) =>
+            acc +
+            (leg.segmentIds || [])
+              .map(segmentById)
+              .filter(Boolean)
+              .reduce((a, s) => a + (s.oneWay || 0), 0),
+          0
+        )
+      : segs.reduce((a, s) => a + (s.oneWay || 0), 0) * 2;
     if (els.tollTotal) {
       els.tollTotal.innerHTML = `
-        <span>Cả chuyến (đi + về): <strong>${formatVnd(roundTrip)}</strong></span>
-        <span>${segs.length} đoạn × 2 chiều · ${data.tolls.vehicle}</span>`;
+        <span>Cả chuyến (đi + về): <strong>${formatVnd(tripTotal)}</strong></span>
+        <span>${legs.length ? legs.length + " chặng" : segs.length + " đoạn × 2 chiều"} · ${data.tolls.vehicle}</span>`;
     }
     if (els.tollNote) {
       els.tollNote.textContent = data.tolls.note || "";
@@ -722,13 +736,19 @@
   }
 
   function renderBudget() {
-    const groups = [
-      { id: "all", label: "Tất cả" },
-      { id: "fixed", label: "Lưu trú" },
-      { id: "tickets", label: "Tour / vé" },
-      { id: "daily", label: "Chi tiêu ngày" },
-      { id: "car", label: "Xe / cao tốc" }
-    ];
+    const groupLabels = {
+      fixed: "Lưu trú",
+      tickets: "Tour / vé",
+      daily: "Chi tiêu ngày",
+      car: "Xe / cao tốc",
+      buffer: "Dự phòng"
+    };
+    // Chỉ hiện chip cho nhóm thực sự có trong data.budget
+    const present = [...new Set(data.budget.map((b) => b.group))];
+    const groups = [{ id: "all", label: "Tất cả" }].concat(
+      present.map((id) => ({ id, label: groupLabels[id] || id }))
+    );
+    if (!groups.some((g) => g.id === state.budgetGroup)) state.budgetGroup = "all";
     renderChips(els.budgetFilter, groups, "budgetGroup", renderBudget);
 
     const list = data.budget.filter(
@@ -846,7 +866,7 @@
       renderTimeline();
     });
     els.resetTickets.addEventListener("click", () => {
-      localStorage.removeItem(storageKey);
+      writeStore(storageKey, null);
       renderTickets();
     });
     if (els.detailBackdrop) {
@@ -875,11 +895,6 @@
       window.visualViewport.addEventListener("resize", pinSheetToView);
       window.visualViewport.addEventListener("scroll", pinSheetToView);
     }
-    window.addEventListener("resize", () => {
-      state.parkedMobile = null;
-      parkDetailNodes();
-      syncDetailSheet();
-    });
   }
 
   renderChips(els.dayFilter, data.days, "day", renderTimeline);
@@ -892,6 +907,7 @@
   renderBudget();
   renderTolls();
   window.requestAnimationFrame(placeHeroStickers);
+  // Một listener resize duy nhất (trước đây có 2 cái cùng gọi syncDetailSheet)
   window.addEventListener("resize", () => {
     window.clearTimeout(placeHeroStickers._t);
     placeHeroStickers._t = window.setTimeout(placeHeroStickers, 180);
