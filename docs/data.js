@@ -495,7 +495,7 @@
       { id: "toll", label: "Cao tốc 2 chiều", amount: 250000, note: "Long Thành · ước", group: "car" },
       { id: "fuel", label: "Xăng khứ hồi", amount: 350000, note: "~240 km cả chuyến", group: "car" },
       { id: "misc", label: "Gửi xe / ghế / nước", amount: 150000, note: "Bãi Dinh Cô", group: "daily" },
-      { id: "buffer", label: "Buffer", amount: 300000, note: "Phòng hờ", group: "tickets" }
+      { id: "buffer", label: "Buffer", amount: 300000, note: "Phòng hờ", group: "buffer" }
     ],
     tolls: {
       vehicle: "Xe dưới 12 chỗ (nhóm 1)",
